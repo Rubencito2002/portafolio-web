@@ -6,23 +6,24 @@
     font-size: 17px;
     margin: 0;
     padding: 0;
-    --deep-blue: #002d3c;
-    --react-blue: #61dbfb;
-    /* Light mode: */
-    --gray: rgb(113, 117, 122);
-    --body-bg: #f8f8ff;
-    --body-color: black;
-    --highlight-color: #007acc;
+    --primary-dark: #2C3E50; /* Azul oscuro neutro */
+    --primary-light: #EAEAEA; /* Gris claro, suave para fondo */
+    --accent-color: #A569BD; /* Morado para resaltar */
+    --secondary-accent: #48C9B0; /* Verde azulado para contrastes */
+    --gray: #7F8C8D; /* Gris intermedio para detalles */
+    --body-bg: #F0F0F0; /* Fondo gris suave */
+    --body-color: #34495E; /* Azul grisáceo oscuro para texto */
+    --highlight-color: #F39C12; /* Naranja suave para hover y focos */
     --over-highlight-color: white;
-    --shadow-color: rgba(0, 0, 0, 0.1);
+    --shadow-color: rgba(0, 0, 0, 0.1); /* Sombra ligera */
 }
 
 /* Dark mode */
 [color-mode='dark'] {
-    --body-bg: var(--deep-blue);
-    --body-color: white;
-    --gray: rgb(209, 213, 219);
-    --highlight-color: #ffd000;
+    --body-bg: var(--primary-dark);
+    --body-color: #ECF0F1;
+    --gray: #BDC3C7;
+    --highlight-color: #E67E22; /* Naranja brillante para resaltar en modo oscuro */
     --over-highlight-color: black;
     --shadow-color: rgba(255, 255, 255, 0.1);
 }
@@ -42,7 +43,7 @@ body::-webkit-scrollbar-thumb {
 
 @supports not selector(::-webkit-scrollbar) {
     body {
-        scrollbar-color: var(--yellow) var(--deep-blue);
+        scrollbar-color: var(--accent-color) var(--primary-dark);
     }
 }
 
@@ -117,16 +118,16 @@ body {
 }
 
 .evidenLogo {
-    fill: #ff6d43;
+    fill: var(--accent-color);
     height: 0.8rem;
 }
 
 .text-lightBlue {
-    color: var(--react-blue);
+    color: var(--secondary-accent);
 }
 
 .text-yellow {
-    color: #ffd000;
+    color: #F39C12;
 }
 
 .text-gray {
@@ -142,25 +143,25 @@ body {
 }
 
 .bg-grad {
-    background-color: hsla(219.99999999999997, 4%, 13%, 1);
+    background-color: hsla(197, 71%, 14%, 1);
     background-image: radial-gradient(
             circle at 26% -2%,
-            hsla(180.0000000000013, 74%, 35%, 0.17) 34.46019567213906%,
-            transparent 111.52108844697476%
+            hsla(0, 100%, 66%, 0.17) 34%,
+            transparent 111%
         ),
         radial-gradient(
             circle at 33% 22%,
-            hsla(227.6470588235294, 0%, 6%, 1) 193.2645292720332%,
-            transparent 211.04195225484372%
+            hsla(210, 100%, 20%, 1) 193%,
+            transparent 211%
         ),
         radial-gradient(
             circle at 26% 2%,
-            hsla(240, 6%, 93%, 1) 19.797173843284874%,
-            transparent 76.52673213557512%
+            hsla(200, 6%, 93%, 1) 19%,
+            transparent 76%
         ),
         radial-gradient(
             circle at 1% 1122%,
-            hsla(231.42857142857144, 5%, 23%, 1) 0%,
+            hsla(231, 5%, 23%, 1) 0%,
             transparent 150%
         );
     background-blend-mode: normal, normal, normal, normal;
@@ -351,36 +352,17 @@ footer {
 
     .project {
         flex-direction: row;
-    }
-
-    .project:nth-child(even) {
-        flex-direction: row-reverse;
-        .project-details {
-            text-align: end;
-            align-items: end;
-        }
-    }
-
-    .project .img-container {
-        flex: 0 0 auto;
-        width: 50%;
-        img {
-            transform: translate(-50%, -50%) scale(1.02);
-        }
-    }
-
-    .project:hover img {
-        transform: translate(-50%, -50%) scale(1);
-    }
-
-    footer {
-        flex-direction: row-reverse;
         justify-content: space-between;
+        .img-container {
+            width: 50%;
+            aspect-ratio: initial;
+        }
+        .project-details {
+            width: 100%;
+        }
     }
-}
 
-@media screen and (min-width: 1200px) {
-    body {
-        width: 60%;
+    .logos {
+        justify-content: space-between;
     }
 }
