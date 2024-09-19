@@ -1,20 +1,18 @@
 @import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css'); /* Bootstrap icons CDN */
 
 :root {
-    font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
-        'Helvetica Neue', sans-serif;
+    font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 17px;
     margin: 0;
     padding: 0;
-    --primary-dark: #2C3E50; /* Azul oscuro neutro */
-    --primary-light: #EAEAEA; /* Gris claro, suave para fondo */
-    --accent-color: #A569BD; /* Morado para resaltar */
-    --secondary-accent: #48C9B0; /* Verde azulado para contrastes */
-    --gray: #7F8C8D; /* Gris intermedio para detalles */
-    --body-bg: #F0F0F0; /* Fondo gris suave */
-    --body-color: #34495E; /* Azul grisáceo oscuro para texto */
-    --highlight-color: #F39C12; /* Naranja suave para hover y focos */
-    --highdark-color: #80530c; /* Naranja suave para hover y focos */
+    --primary-dark: #1B2631;
+    --primary-light: #F4F6F7; /* suave para fondo */
+    --accent-color: #5DADE2;
+    --secondary-accent: #F5B041;
+    --gray: #7D8797;
+    --body-bg: #EBF5FB; /* Fondo suave */
+    --body-color: #2C3E50; /* oscuro para texto */
+    --highlight-color: #27AE60; /* suave para hover y focos */
     --over-highlight-color: white;
     --shadow-color: rgba(0, 0, 0, 0.1); /* Sombra ligera */
 }
@@ -385,11 +383,11 @@ footer {
 }
 
 .btn-download-cv:hover {
-    background-color: var(--highdark-color); /* Color de fondo en hover, ajusta según tu paleta */
+    background-color: #003d80; /* Color de fondo en hover, ajusta según tu paleta */
     transform: scale(1.05); /* Efecto de escala al pasar el cursor */
 }
 
 .btn-download-cv:active {
-    background-color: var(--highdark-color);  /* Color de fondo en clic, ajusta según tu paleta */
+    background-color: #002d60; /* Color de fondo en clic, ajusta según tu paleta */
     transform: scale(1); /* Efecto de escala al hacer clic */
 }
