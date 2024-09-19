@@ -14,6 +14,7 @@
     --body-bg: #F0F0F0; /* Fondo gris suave */
     --body-color: #34495E; /* Azul grisáceo oscuro para texto */
     --highlight-color: #F39C12; /* Naranja suave para hover y focos */
+    --highdark-color: #80530c; /* Naranja suave para hover y focos */
     --over-highlight-color: white;
     --shadow-color: rgba(0, 0, 0, 0.1); /* Sombra ligera */
 }
@@ -366,4 +367,27 @@ footer {
     .logos {
         justify-content: space-between;
     }
+}
+
+/* Botón personalizado para la descarga de CV */
+.btn-download-cv {
+    background-color: var(--highlight-color); /* Color principal, ajusta según tu paleta */
+    color: var(--over-highlight-color); /* Color del texto */
+    border: none; /* Sin borde */
+    padding: 10px 20px; /* Espaciado interno */
+    font-size: 16px; /* Tamaño del texto */
+    border-radius: 50px; /* Bordes redondeados */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    font-weight: bold; /* Texto en negrita */
+    transition: background-color 0.3s, transform 0.3s; /* Efectos de transición */
+}
+
+.btn-download-cv:hover {
+    background-color: var(--highdark-color); /* Color de fondo en hover, ajusta según tu paleta */
+    transform: scale(1.05); /* Efecto de escala al pasar el cursor */
+}
+
+.btn-download-cv:active {
+    background-color: var(--highdark-color);  /* Color de fondo en clic, ajusta según tu paleta */
+    transform: scale(1); /* Efecto de escala al hacer clic */
 }
