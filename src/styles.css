@@ -300,10 +300,11 @@ section {
     align-self: center;
 }
 
-.logos img,
-.logos svg {
+.logos img, .logos svg {
     height: 3.5rem;
     width: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 footer {
