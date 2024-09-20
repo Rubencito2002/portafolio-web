@@ -391,3 +391,10 @@ footer {
     background-color: #002d60; /* Color de fondo en clic, ajusta según tu paleta */
     transform: scale(1); /* Efecto de escala al hacer clic */
 }
+
+.card {
+    background-color: rgba(255, 255, 255, 0.7); /* Fondo blanco translúcido */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Borde translúcido */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera para resaltar */
+    backdrop-filter: blur(5px); /* Desenfoque sutil para el fondo detrás de la carta */
+}
