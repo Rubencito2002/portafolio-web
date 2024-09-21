@@ -13,5 +13,5 @@ import { FooterComponent } from '../footer/footer.component';
 })
 
 export class HomeComponent {
-  email = 'ruben.machado1920@gmail.com';
+  
 }

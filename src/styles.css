@@ -180,8 +180,7 @@ section {
     margin-top: 1rem;
 }
 
-.sectionIntro,
-.intro {
+.sectionIntro, .intro {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -191,7 +190,13 @@ section {
 .intro img {
     height: 5rem;
     width: auto;
-    border-radius: 500px;
+    border-radius: 34% 66% 64% 36% / 37% 39% 61% 63%;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Zoom más grande en hover */
+.intro img:hover {
+    transform: scale(2); /* Aumenta el zoom */
 }
 
 .intro div {

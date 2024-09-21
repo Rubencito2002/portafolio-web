@@ -1,33 +1,36 @@
-<section class="sectionIntro">
-  <header class="intro">
-    <img src="assets/img/jpeg/fotoPerfil.jpeg" alt="Foto de perfil de Rubén Aldonza Cejudo" />
-    <div>
-      <h1>¡Hola! Soy Rubén Aldonza Cejudo</h1>
-      <p class="mt-1 text-gray">
-        Desarrollador web <span class="text-highlight">Fullstack</span> con React, Angular y Django
-      </p>
+<!-- Menú de navegación con Bootstrap -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">Mi Portfolio</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#aboutSection">Sobre mí</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#projectsSection">Proyectos</a>
+        </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link" href="#contactoSection">Contacto</a>
+        </li> -->
+      </ul>
     </div>
-  </header>
-  
-  <p> 
-    Soy desarrollador web, centrado en el Frontend, ¡pero hago de todo! Puedes encontrarme en <a href="mailto:ruben.machado1920@gmail.com" class="text-highlight">{{ email }}</a> y en <a href="https://linkedin.com/in/rubén-aldonza-cejudo-414bb7142" class="text-highlight">LinkedIn</a>.
-  </p>
-
-  <!-- Otro contenido del componente -->
-  <div class="container text-center mt-4">
-    <a href="assets/pdf/RubénAldonzaCejudo_CV.pdf" download="Mi_CV" class="btn-download-cv">
-      Descargar CV
-    </a>
   </div>
+</nav>
 
+<section class="aboutSection py-5" id="aboutSection">
+  <div class="container">
+    <app-skills></app-skills>
+  </div>
 </section>
 
-<section class="aboutSection">
-  <app-skills></app-skills>
-</section>
-
-<section class="projectsSection">
-  <app-projects></app-projects>
+<section class="projectsSection py-5" id="projectsSection">
+  <div class="container">
+    <app-projects></app-projects>
+  </div>
 </section>
   
 <app-footer></app-footer>
