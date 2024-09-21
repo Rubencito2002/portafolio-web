@@ -5,14 +5,14 @@
     font-size: 17px;
     margin: 0;
     padding: 0;
-    --primary-dark: #1B2631;
-    --primary-light: #F4F6F7; /* suave para fondo */
-    --accent-color: #5DADE2;
-    --secondary-accent: #F5B041;
-    --gray: #7D8797;
-    --body-bg: #EBF5FB; /* Fondo suave */
-    --body-color: #2C3E50; /* oscuro para texto */
-    --highlight-color: #27AE60; /* suave para hover y focos */
+    --primary-dark: #1A1F36; /* Azul Marino - Fondo Oscuro */
+    --primary-light: #ECEFF1; /* Gris Claro - Fondo de Sección */
+    --accent-color: #00C6D7; /* Cian Brillante - Enlaces/Resaltados */
+    --secondary-accent: #FF6F61; /* Naranja Claro - Acento */
+    --gray: #7D8797; /* Gris Neutro */
+    --body-bg: #F0F0F5; /* Blanco Suave - Fondo General */
+    --body-color: #2C3E50; /* Oscuro para Texto */
+    --highlight-color: #00C6D7; /* Cian para Hover y Focos */
     --over-highlight-color: white;
     --shadow-color: rgba(0, 0, 0, 0.1); /* Sombra ligera */
 }
@@ -20,9 +20,9 @@
 /* Dark mode */
 [color-mode='dark'] {
     --body-bg: var(--primary-dark);
-    --body-color: #ECF0F1;
+    --body-color: #ECEFF1; /* Color claro para el texto */
     --gray: #BDC3C7;
-    --highlight-color: #E67E22; /* Naranja brillante para resaltar en modo oscuro */
+    --highlight-color: #FF6F61; /* Naranja brillante para resaltar en modo oscuro */
     --over-highlight-color: black;
     --shadow-color: rgba(255, 255, 255, 0.1);
 }
@@ -69,6 +69,7 @@ h3 {
     text-decoration: underline;
     margin-bottom: 15px;
 }
+
 body {
     display: flex;
     flex-direction: column;
@@ -100,7 +101,6 @@ body {
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     background-color: rgba(0, 0, 0, 0.1);
-
     -webkit-box-shadow: 2px 2px 8px var(--shadow-color);
     box-shadow: 2px 2px 8px var(--shadow-color);
 }
@@ -195,6 +195,7 @@ section {
     height: 5rem;
     width: auto;
     border-radius: 34% 66% 64% 36% / 37% 39% 61% 63%;
+    border: 5px solid var(--accent-color); /* Borde de color Cian */
     transition: transform 0.3s ease-in-out;
 }
 
@@ -384,7 +385,7 @@ footer {
 
 /* Botón personalizado para la descarga de CV */
 .btn-download-cv {
-    background-color: var(--highlight-color); /* Color principal, ajusta según tu paleta */
+    background-color: var(--highlight-color); /* Color principal */
     color: var(--over-highlight-color); /* Color del texto */
     border: none; /* Sin borde */
     padding: 10px 20px; /* Espaciado interno */
@@ -396,18 +397,37 @@ footer {
 }
 
 .btn-download-cv:hover {
-    background-color: #003d80; /* Color de fondo en hover, ajusta según tu paleta */
+    color: white;
+    background-color: #007c99; /* Color de fondo en hover */
     transform: scale(1.05); /* Efecto de escala al pasar el cursor */
 }
 
 .btn-download-cv:active {
-    background-color: #002d60; /* Color de fondo en clic, ajusta según tu paleta */
+    background-color: #005f73; /* Color de fondo en clic */
     transform: scale(1); /* Efecto de escala al hacer clic */
 }
 
 .card {
     background-color: rgba(255, 255, 255, 0.7); /* Fondo blanco translúcido */
     border: 1px solid rgba(255, 255, 255, 0.2); /* Borde translúcido */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera para resaltar */
-    backdrop-filter: blur(5px); /* Desenfoque sutil para el fondo detrás de la carta */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    backdrop-filter: blur(5px); /* Desenfoque sutil */
 }
+
+.custom-navbar {
+    background-color: rgba(93, 173, 226, 0.7); /* Color translúcido usando el color de tu paleta (var(--accent-color)) */
+    -webkit-backdrop-filter: blur(10px); /* Fondo desenfocado */
+    backdrop-filter: blur(10px);
+    transition: background-color 0.3s ease-in-out;
+    box-shadow: 0 4px 6px var(--shadow-color);
+}
+
+.custom-navbar .nav-link {
+    color: var(--body-color); /* Color del texto */
+    transition: color 0.3s;
+}
+
+.custom-navbar .nav-link:hover {
+    color: var(--highlight-color); /* Color de resaltado al pasar el cursor */
+}
+
