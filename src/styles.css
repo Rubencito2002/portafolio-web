@@ -317,6 +317,10 @@ section {
     margin-bottom: 15px;
 }
 
+.logos img:hover, .logos svg:hover {
+    transform: scale(1.5);
+}
+
 footer {
     width: calc(100% - 2rem);
     padding: 2rem 0;
