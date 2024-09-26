@@ -1,0 +1,26 @@
+<section class="container">
+    <h3 class="section-title text-center">Certificaciones y Logros</h3>
+    <div class="text-center">
+        <p> 
+            Puedes ver todos mis certificado en mi perfil de <a href="https://linkedin.com/in/rubén-aldonza-cejudo-414bb7142" class="text-highlight">LinkedIn</a> pero aqui muestro los más principales.
+        </p>
+    </div>
+    
+    <div class="row">
+        <div *ngFor="let certification of certifications" class="col-md-6 col-lg-4 col-xl-4 mb-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <h3 class="card-title">{{ certification.title }}</h3>
+                    <p class="card-subtitle mb-2 text-muted"> - {{ certification.organization }}</p>
+                    <p class="card-subtitle mb-2 text-muted" *ngIf="certification.date"> - {{ certification.date }}</p>
+                    <p class="card-text"> - {{ certification.description }}</p>
+                    
+                    <!-- Enlace opcional al certificado -->
+                    <a *ngIf="certification.link" [href]="certification.link" target="_blank" class="btn btn-outline-primary mt-auto">
+                        Ver Certificado
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
