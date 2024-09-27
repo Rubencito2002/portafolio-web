@@ -10,10 +10,18 @@
         <div *ngFor="let certification of certifications" class="col-md-6 col-lg-4 col-xl-4 mb-4">
             <div class="card h-100 shadow-sm">
                 <div class="card-body">
-                    <h3 class="card-title">{{ certification.title }}</h3>
-                    <p class="card-subtitle mb-2 text-muted"> - {{ certification.organization }}</p>
-                    <p class="card-subtitle mb-2 text-muted" *ngIf="certification.date"> - {{ certification.date }}</p>
-                    <p class="card-text"> - {{ certification.description }}</p>
+                    <h5 class="card-title">{{ certification.title }}</h5>
+                    <ul>
+                        <li>
+                            Empresa: <span class="text-highlight">{{ certification.organization }}</span>
+                        </li>
+                        <li *ngIf="certification.date">
+                            Fecha: <span class="text-highlight">{{ certification.date }}</span>
+                        </li>
+                        <li>
+                            Descripción: <span class="text-highlight">{{ certification.description }}</span>
+                        </li>
+                    </ul>
                     
                     <!-- Enlace opcional al certificado -->
                     <a *ngIf="certification.link" [href]="certification.link" target="_blank" class="btn btn-outline-primary mt-auto">
