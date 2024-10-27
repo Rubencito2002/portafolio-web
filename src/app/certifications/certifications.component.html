@@ -2,15 +2,24 @@
     <h3 class="section-title text-center">Certificaciones y Logros</h3>
     <div class="text-center">
         <p> 
-            Puedes ver todos mis certificado en mi perfil de <a href="https://linkedin.com/in/rubén-aldonza-cejudo-414bb7142" class="text-highlight" target="_blank">LinkedIn</a> pero aqui muestro los más principales.
+            Puedes ver todos mis certificados en mi perfil de <a href="https://linkedin.com/in/rubén-aldonza-cejudo-414bb7142" class="text-highlight" target="_blank">LinkedIn</a>, pero aquí muestro los más importantes.
         </p>
         <p> 
-            Tambien tengo unos logros que consegui en <a href="https://learn.microsoft.com/en-us/users/rubnaldonza-1457/" class="text-highlight" target="_blank">Microsoft</a> mediante un challenge de skills.
+            También tengo logros obtenidos en <a href="https://learn.microsoft.com/en-us/users/rubnaldonza-1457/" class="text-highlight" target="_blank">Microsoft</a> mediante un challenge de skills.
         </p>
     </div>
-    
+
+    <!-- Filtros de Tecnología -->
+    <div class="d-flex justify-content-center mb-4">
+        <button class="btn btn-outline-primary me-2" (click)="filterCertifications('all')">Todos</button>
+        <button *ngFor="let tech of technologies" class="btn btn-outline-primary me-2" (click)="filterCertifications(tech)">
+            {{ tech }}
+        </button>
+    </div>
+
+    <!-- Lista de Certificados Filtrados -->
     <div class="row">
-        <div *ngFor="let certification of certifications" class="col-md-6 col-lg-4 col-xl-4 mb-4">
+        <div *ngFor="let certification of filteredCertifications" class="col-md-6 col-lg-4 col-xl-4 mb-4">
             <div class="card h-100">
                 <div class="card-body">
                     <h5 class="card-title">{{ certification.title }}</h5>
@@ -25,7 +34,7 @@
                             Descripción: <span class="text-highlight">{{ certification.description }}</span>
                         </li>
                     </ul>
-                    
+
                     <!-- Enlace opcional al certificado -->
                     <a *ngIf="certification.link" [href]="certification.link" target="_blank" class="btn btn-outline-primary mt-auto">
                         Ver Certificado
