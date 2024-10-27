@@ -70,9 +70,15 @@ export class ProjectsComponent {
     },
     {
       title: 'Sistema de Gestión Escolar en Java',
-      description: 'Aplicación en Java para administrar estudiantes, asignaturas, profesores e inscripciones, con interfaz en Swing y base de datos MySQL, que permite añadir, actualizar, eliminar y ver los datos de manera organizada.',
+      description: 'Aplicación en Java para administrar estudiantes, asignaturas, profesores e inscripciones, con interfaz en Swing y base de datos MySQL, que permite añadir, actualizar, eliminar y ver los datos de manera organizada. Offline mientras encuentro un hosting barato para el backend.',
       technologies: ['Java'],
       code: 'https://github.com/Rubencito2002/StudentManagementSystem'
+    },
+    {
+      title: 'Sistema de Gestión del Inventario y Venta de un Comercio.',
+      description: 'Un sistema de gestión de inventarios es una aplicación tecnológica diseñada para supervisar y organizar el flujo de productos en un comercio y las ventas del propio comercio. Offline mientras encuentro un hosting barato para el backend.',
+      technologies: ['Django'],
+      code: 'https://github.com/ieshm-2daw/proyectointegrado-ruben'
     }
   ];
 
