@@ -24,7 +24,7 @@ export class ProjectsComponent {
       title: 'Búsqueda de Personajes de Marvel',
       description: 'Este proyecto fue uno de los primeros que desarrollé utilizando REACT, es un buscador de personajes que utiliza la API de Marvel.',
       image: 'assets/img/png/proyectoMarvel.png',
-      technologies: ['React', 'JavaScript'],
+      technologies: ['JavaScript', 'React'],
       link: 'https://marvel-explorer-phi.vercel.app/',
       code: 'https://github.com/Rubencito2002/marvel-explorer'
     },
@@ -32,7 +32,7 @@ export class ProjectsComponent {
       title: 'Proyecto de Bootstrap & CSS',
       description: 'Este proyecto muestra el uso de Bootstrap y CSS para crear una página web responsive y atractiva.',
       image: 'assets/img/png/proyectoBootstrap&CSS.png',
-      technologies: ['Bootstrap', 'CSS'],
+      technologies: ['HTML', 'CSS', 'Bootstrap'],
       link: 'https://proyecto-bootstrap-con-css.vercel.app/',
       code: 'https://github.com/Rubencito2002/ProyectoBootstrapConCSS'
     },
@@ -40,7 +40,7 @@ export class ProjectsComponent {
       title: 'Gestor de Contactos en React con Bootstrap',
       description: 'Aplicación que permite gestionar contactos, desarrollada en React y React Bootstrap.',
       image: 'assets/img/png/proyectoGestordeContactos.png',
-      technologies: ['React', 'Bootstrap'],
+      technologies: ['Bootstrap', 'React' ],
       link: 'https://gestor-de-contactos.vercel.app/',
       code: 'https://github.com/Rubencito2002/gestor-de-contactos'
     },
@@ -48,7 +48,7 @@ export class ProjectsComponent {
       title: 'Rock, Paper, Scissors',
       description: 'Juego interactivo de "Piedra, Papel o Tijeras" implementado en JavaScript con una interfaz visual intuitiva. Los resultados se muestran en pantalla y se celebra una victoria con una animación de confeti, con opción para reiniciar el juego.',
       image: 'assets/img/png/Rock-Paper-Scissor.png',
-      technologies: ['JavaScript'],
+      technologies: ['HTML', 'CSS', 'JavaScript'],
       link: 'https://rock-paper-scissor-flame-theta.vercel.app/',
       code: 'https://github.com/Rubencito2002/Rock-Paper--Scissor'
     },
@@ -56,7 +56,7 @@ export class ProjectsComponent {
       title: 'Calculadora de IMC con Bootstrap',
       description: 'Aplicación web que calcula el Índice de Masa Corporal (IMC) a partir del peso y la altura ingresados, mostrando el resultado en una interfaz limpia y estilizada con Bootstrap.',
       image: 'assets/img/png/calculadora-imc.png',
-      technologies: ['JavaScript', 'Bootstrap'],
+      technologies: ['HTML', 'CSS', 'JavaScript', 'Bootstrap'],
       link: 'https://calculadora-imc-indol-psi.vercel.app/',
       code: 'https://github.com/Rubencito2002/calculadora-imc'
     },
@@ -64,7 +64,7 @@ export class ProjectsComponent {
       title: 'Conversor de Moneda en Tiempo Real',
       description: 'Convierte cantidades entre diferentes monedas utilizando tasas de cambio actualizadas al instante.',
       image: 'assets/img/png/conversor-moneda.png',
-      technologies: ['JavaScript', 'Bootstrap'],
+      technologies: ['HTML', 'CSS', 'JavaScript', 'Bootstrap'],
       link: 'https://conversor-moneda-iota.vercel.app/',
       code: 'https://github.com/Rubencito2002/conversor-moneda'
     },
@@ -77,7 +77,7 @@ export class ProjectsComponent {
     {
       title: 'Sistema de Gestión del Inventario y Venta de un Comercio.',
       description: 'Un sistema de gestión de inventarios es una aplicación tecnológica diseñada para supervisar y organizar el flujo de productos en un comercio y las ventas del propio comercio. Offline mientras encuentro un hosting barato para el backend.',
-      technologies: ['Django'],
+      technologies: ['HTML', 'CSS', 'JavaScript', 'Bootstrap', 'Django'],
       code: 'https://github.com/ieshm-2daw/proyectointegrado-ruben'
     }
   ];
