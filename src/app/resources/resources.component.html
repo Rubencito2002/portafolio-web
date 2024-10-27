@@ -1,0 +1,30 @@
+<section class="container">
+    <h3 class="section-title text-center">Recursos Recomendados</h3>
+    <p class="text-center">
+        Aquí comparto algunos recursos de libros, cursos y herramientas útiles.
+    </p>
+
+    <!-- Botones de filtrado -->
+    <div class="d-flex justify-content-center mb-4">
+        <button class="btn btn-outline-primary me-2" (click)="filterResources('all')">Todos</button>
+        <button *ngFor="let lang of languages" class="btn btn-outline-primary me-2"  (click)="filterResources(lang)">
+            {{ lang }}
+        </button>
+    </div>
+
+    <!-- Lista de Recursos Filtrados -->
+    <div class="row">
+        <div class="col-md-6 col-lg-4 col-xl-4 mb-4" *ngFor="let resource of filteredResources">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">{{ resource.title }}</h5>
+                    <p class="card-text">{{ resource.description }}</p>
+                    <span class="badge bg-secondary">{{ resource.type }}</span>
+                    <div class="mt-3">
+                        <a [href]="resource.link" target="_blank" class="btn btn-outline-primary">Ver Recurso</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
