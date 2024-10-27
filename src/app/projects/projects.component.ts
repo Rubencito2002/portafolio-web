@@ -4,9 +4,9 @@ import { CommonModule } from '@angular/common';
 interface Project {
   title: string;
   description: string;
-  image: string;
+  image?: string; // Opcional para imagen del proyecto si no esta desplegado
   technologies: string[];
-  link: string;
+  link?: string; // Opcional para enlace del proyecto si no esta desplegado
   code: string;
 }
 
@@ -67,10 +67,21 @@ export class ProjectsComponent {
       technologies: ['JavaScript', 'Bootstrap'],
       link: 'https://conversor-moneda-iota.vercel.app/',
       code: 'https://github.com/Rubencito2002/conversor-moneda'
+    },
+    {
+      title: 'Sistema de Gestión Escolar en Java',
+      description: 'Aplicación en Java para administrar estudiantes, asignaturas, profesores e inscripciones, con interfaz en Swing y base de datos MySQL, que permite añadir, actualizar, eliminar y ver los datos de manera organizada.',
+      technologies: ['Java'],
+      code: 'https://github.com/Rubencito2002/StudentManagementSystem'
     }
   ];
 
   filteredProjects: Project[] = this.projects;
+
+  // Obtener tecnologías únicas para los botones de filtrado
+  technologies: string[] = Array.from(
+    new Set(this.projects.flatMap(project => project.technologies))
+  );
 
   filterProjects(technology: string): void {
     if (technology === 'all') {
