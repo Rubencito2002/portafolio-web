@@ -13,8 +13,8 @@
     </div>
 
     <!-- Lista de Recursos Filtrados -->
-    <div class="row">
-        <div class="col-md-6 col-lg-4 col-xl-4 mb-4" *ngFor="let resource of filteredResources">
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+        <div class="col-md-6 col-lg-4 col-xl-4 mb-4" *ngFor="let resource of filteredResources | slice:0:resourcesToShow">
             <div class="card h-100">
                 <div class="card-body">
                     <h5 class="card-title">{{ resource.title }}</h5>
@@ -26,5 +26,15 @@
                 </div>
             </div>
         </div>
+    </div>
+
+    <!-- Botones de "Mostrar Más" y "Mostrar Menos" -->
+    <div class="text-center mt-4">
+        <button *ngIf="resourcesToShow < filteredResources.length" (click)="showMoreResources()" class="btn btn-outline-primary">
+            Mostrar más proyectos
+        </button>
+        <button *ngIf="resourcesToShow > 4" (click)="showLessResources()" class="btn btn-outline-secondary">
+            Mostrar menos proyectos
+        </button>
     </div>
 </section>

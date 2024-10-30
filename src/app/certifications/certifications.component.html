@@ -18,8 +18,8 @@
     </div>
 
     <!-- Lista de Certificados Filtrados -->
-    <div class="row">
-        <div *ngFor="let certification of filteredCertifications" class="col-md-6 col-lg-4 col-xl-4 mb-4">
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+        <div *ngFor="let certification of filteredCertifications | slice:0:certificationsToShow" class="col-md-6 col-lg-4 col-xl-4 mb-4">
             <div class="card h-100">
                 <div class="card-body">
                     <h5 class="card-title">{{ certification.title }}</h5>
@@ -34,7 +34,6 @@
                             Descripción: <span class="text-highlight">{{ certification.description }}</span>
                         </li>
                     </ul>
-
                     <!-- Enlace opcional al certificado -->
                     <a *ngIf="certification.link" [href]="certification.link" target="_blank" class="btn btn-outline-primary mt-auto">
                         Ver Certificado
@@ -42,5 +41,15 @@
                 </div>
             </div>
         </div>
+    </div>
+
+    <!-- Botones de "Mostrar Más" y "Mostrar Menos" -->
+    <div class="text-center mt-4">
+        <button *ngIf="certificationsToShow < filteredCertifications.length" (click)="showMoreCertifications()" class="btn btn-outline-primary">
+            Mostrar más certificados
+        </button>
+        <button *ngIf="certificationsToShow > 4" (click)="showLessCertifications()" class="btn btn-outline-secondary">
+            Mostrar menos certificados
+        </button>
     </div>
 </section>

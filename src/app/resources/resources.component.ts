@@ -72,6 +72,8 @@ export class ResourcesComponent {
     );
   }
 
+  resourcesToShow: number = 3;
+
   filterResources(technology: string): void {
     if (technology === 'all') {
       this.filteredResources = this.resources;
@@ -80,5 +82,15 @@ export class ResourcesComponent {
         resource.languages.includes(technology)
       );
     }
+    this.resourcesToShow = 3;
+  }
+
+  // Métodos para mostrar más o menos proyectos
+  showMoreResources(): void {
+    this.resourcesToShow += 3;
+  }
+
+  showLessResources(): void {
+    this.resourcesToShow = 3;
   }
 }

@@ -97,6 +97,8 @@ export class ProjectsComponent {
     new Set(this.projects.flatMap(project => project.technologies))
   );
 
+  projectsToShow: number = 3;
+
   filterProjects(technology: string): void {
     if (technology === 'all') {
       this.filteredProjects = this.projects;
@@ -105,5 +107,15 @@ export class ProjectsComponent {
         project.technologies.includes(technology)
       );
     }
+    this.projectsToShow = 3;
+  }
+
+  // Métodos para mostrar más o menos proyectos
+  showMoreProjects(): void {
+    this.projectsToShow += 3;
+  }
+
+  showLessProjects(): void {
+    this.projectsToShow = 3;
   }
 }

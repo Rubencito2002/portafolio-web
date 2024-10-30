@@ -100,6 +100,8 @@ export class CertificationsComponent implements OnInit {
     );
   }
 
+  certificationsToShow: number = 3;
+
   filterCertifications(technology: string): void {
     if (technology === 'all') {
       this.filteredCertifications = this.certifications;
@@ -108,5 +110,15 @@ export class CertificationsComponent implements OnInit {
         cert.technologies.includes(technology)
       );
     }
+    this.certificationsToShow = 3;
+  }
+
+  // Métodos para mostrar más o menos proyectos
+  showMoreCertifications(): void {
+    this.certificationsToShow += 3;
+  }
+
+  showLessCertifications(): void {
+    this.certificationsToShow = 3;
   }
 }
