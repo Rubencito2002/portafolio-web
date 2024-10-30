@@ -79,6 +79,14 @@ export class ProjectsComponent {
       description: 'Un sistema de gestión de inventarios es una aplicación tecnológica diseñada para supervisar y organizar el flujo de productos en un comercio y las ventas del propio comercio. Offline mientras encuentro un hosting barato para el backend.',
       technologies: ['HTML', 'CSS', 'JavaScript', 'Bootstrap', 'Django'],
       code: 'https://github.com/ieshm-2daw/proyectointegrado-ruben'
+    },
+    {
+      title: 'Tablero Kanban: Gestión de Tareas Eficiente',
+      description: 'Organiza tus tareas de manera efectiva con nuestro Tablero Kanban. Visualiza el progreso de tus proyectos y mejora la colaboración en equipo a través de un sistema intuitivo y fácil de usar.',
+      image: 'assets/img/png/tablero-kanban.png',
+      technologies: ['HTML', 'Bootstrap', 'React'],
+      code: 'https://github.com/Rubencito2002/kanban-board',
+      link: 'https://kanban-tablero.vercel.app/'
     }
   ];
 
