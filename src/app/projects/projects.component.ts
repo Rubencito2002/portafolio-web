@@ -8,6 +8,7 @@ interface Project {
   technologies: string[];
   link?: string; // Opcional para enlace del proyecto si no esta desplegado
   code: string;
+  tipo: string[];
 }
 
 @Component({
@@ -26,7 +27,8 @@ export class ProjectsComponent {
       image: 'assets/img/png/proyectoMarvel.png',
       technologies: ['JavaScript', 'React'],
       link: 'https://marvel-explorer-phi.vercel.app/',
-      code: 'https://github.com/Rubencito2002/marvel-explorer'
+      code: 'https://github.com/Rubencito2002/marvel-explorer',
+      tipo	: ['Frontend']
     },
     {
       title: 'Proyecto de Bootstrap & CSS',
@@ -34,7 +36,8 @@ export class ProjectsComponent {
       image: 'assets/img/png/proyectoBootstrap&CSS.png',
       technologies: ['HTML', 'CSS', 'Bootstrap'],
       link: 'https://proyecto-bootstrap-con-css.vercel.app/',
-      code: 'https://github.com/Rubencito2002/ProyectoBootstrapConCSS'
+      code: 'https://github.com/Rubencito2002/ProyectoBootstrapConCSS',
+      tipo	: ['Frontend']
     },
     {
       title: 'Gestor de Contactos en React con Bootstrap',
@@ -42,7 +45,8 @@ export class ProjectsComponent {
       image: 'assets/img/png/proyectoGestordeContactos.png',
       technologies: ['Bootstrap', 'React' ],
       link: 'https://gestor-de-contactos.vercel.app/',
-      code: 'https://github.com/Rubencito2002/gestor-de-contactos'
+      code: 'https://github.com/Rubencito2002/gestor-de-contactos',
+      tipo	: ['Frontend']
     },
     {
       title: 'Rock, Paper, Scissors',
@@ -50,7 +54,8 @@ export class ProjectsComponent {
       image: 'assets/img/png/Rock-Paper-Scissor.png',
       technologies: ['HTML', 'CSS', 'JavaScript'],
       link: 'https://rock-paper-scissor-flame-theta.vercel.app/',
-      code: 'https://github.com/Rubencito2002/Rock-Paper--Scissor'
+      code: 'https://github.com/Rubencito2002/Rock-Paper--Scissor',
+      tipo	: ['Frontend']
     },
     {
       title: 'Calculadora de IMC con Bootstrap',
@@ -58,7 +63,8 @@ export class ProjectsComponent {
       image: 'assets/img/png/calculadora-imc.png',
       technologies: ['HTML', 'CSS', 'JavaScript', 'Bootstrap'],
       link: 'https://calculadora-imc-indol-psi.vercel.app/',
-      code: 'https://github.com/Rubencito2002/calculadora-imc'
+      code: 'https://github.com/Rubencito2002/calculadora-imc',
+      tipo	: ['Frontend']
     },
     {
       title: 'Conversor de Moneda en Tiempo Real',
@@ -66,19 +72,22 @@ export class ProjectsComponent {
       image: 'assets/img/png/conversor-moneda.png',
       technologies: ['HTML', 'CSS', 'JavaScript', 'Bootstrap'],
       link: 'https://conversor-moneda-iota.vercel.app/',
-      code: 'https://github.com/Rubencito2002/conversor-moneda'
+      code: 'https://github.com/Rubencito2002/conversor-moneda',
+      tipo	: ['Frontend']
     },
     {
       title: 'Sistema de Gestión Escolar en Java',
       description: 'Aplicación en Java para administrar estudiantes, asignaturas, profesores e inscripciones, con interfaz en Swing y base de datos MySQL, que permite añadir, actualizar, eliminar y ver los datos de manera organizada. Offline mientras encuentro un hosting barato para el backend.',
       technologies: ['Java'],
-      code: 'https://github.com/Rubencito2002/StudentManagementSystem'
+      code: 'https://github.com/Rubencito2002/StudentManagementSystem',
+      tipo	: ['Backend']
     },
     {
       title: 'Sistema de Gestión del Inventario y Venta de un Comercio.',
       description: 'Un sistema de gestión de inventarios es una aplicación tecnológica diseñada para supervisar y organizar el flujo de productos en un comercio y las ventas del propio comercio. Offline mientras encuentro un hosting barato para el backend.',
       technologies: ['HTML', 'CSS', 'JavaScript', 'Bootstrap', 'Django'],
-      code: 'https://github.com/ieshm-2daw/proyectointegrado-ruben'
+      code: 'https://github.com/ieshm-2daw/proyectointegrado-ruben',
+      tipo	: ['Fullstack']
     },
     {
       title: 'Tablero Kanban: Gestión de Tareas Eficiente',
@@ -86,7 +95,8 @@ export class ProjectsComponent {
       image: 'assets/img/png/tablero-kanban.png',
       technologies: ['HTML', 'Bootstrap', 'React'],
       code: 'https://github.com/Rubencito2002/kanban-board',
-      link: 'https://kanban-tablero.vercel.app/'
+      link: 'https://kanban-tablero.vercel.app/',
+      tipo	: ['Frontend']
     }
   ];
 
@@ -97,15 +107,26 @@ export class ProjectsComponent {
     new Set(this.projects.flatMap(project => project.technologies))
   );
 
+  tipos: string[] = Array.from(
+    new Set(this.projects.flatMap(project => project.tipo))
+  );
+
   projectsToShow: number = 3;
 
   filterProjects(technology: string): void {
     if (technology === 'all') {
       this.filteredProjects = this.projects;
     } else {
-      this.filteredProjects = this.projects.filter(project =>
-        project.technologies.includes(technology)
-      );
+      this.filteredProjects = this.projects.filter(project => project.technologies.includes(technology));
+    }
+    this.projectsToShow = 3;
+  }
+
+  filterProjectsTipo(tipo: string): void {
+    if (tipo === 'all') {
+      this.filteredProjects = this.projects;
+    } else {
+      this.filteredProjects = this.projects.filter(project => project.tipo.includes(tipo));
     }
     this.projectsToShow = 3;
   }

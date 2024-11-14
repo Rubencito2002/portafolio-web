@@ -9,6 +9,12 @@
         </button>
     </div>
 
+    <div class="d-flex justify-content-center mb-4">
+        <button *ngFor="let tipos of tipos" class="btn btn-filtrado me-2" (click)="filterProjectsTipo(tipos)">
+            {{ tipos }}
+        </button>
+    </div>
+
     <!-- Lista de Proyectos Filtrados -->
     <div class="row row-cols-1 row-cols-md-2 g-4">
         <div class="col-12 col-md-4" *ngFor="let project of filteredProjects | slice:0:projectsToShow">
@@ -17,6 +23,11 @@
                 <div class="card-body">
                     <h5 class="card-title">{{ project.title }}</h5>
                     <p class="card-text">{{ project.description }}</p>
+                    <div class="techList mb-2">
+                        <span *ngFor="let tipos of project.tipo" class="badge fondo-tipos me-1">
+                            {{ tipos }}
+                        </span>
+                    </div>
                     <div class="techList mb-2">
                         <span *ngFor="let tech of project.technologies" class="badge fondo-tipos me-1">
                             {{ tech }}
