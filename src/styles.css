@@ -5,26 +5,20 @@
     font-size: 17px;
     margin: 0;
     padding: 0;
-    --primary-dark: #1A1F36; /* Azul Marino - Fondo Oscuro */
-    --primary-light: #ECEFF1; /* Gris Claro - Fondo de Sección */
-    --accent-color: #00C6D7; /* Cian Brillante - Enlaces/Resaltados */
-    --secondary-accent: #FF6F61; /* Naranja Claro - Acento */
-    --gray: #7D8797; /* Gris Neutro */
-    --body-bg: #F0F0F5; /* Blanco Suave - Fondo General */
-    --body-color: #2C3E50; /* Oscuro para Texto */
-    --highlight-color: #00C6D7; /* Cian para Hover y Focos */
-    --over-highlight-color: white;
     --shadow-color: rgba(0, 0, 0, 0.1); /* Sombra ligera */
-}
-
-/* Dark mode */
-[color-mode='dark'] {
-    --body-bg: var(--primary-dark);
-    --body-color: #ECEFF1; /* Color claro para el texto */
-    --gray: #BDC3C7;
-    --highlight-color: #FF6F61; /* Naranja brillante para resaltar en modo oscuro */
-    --over-highlight-color: black;
-    --shadow-color: rgba(255, 255, 255, 0.1);
+    --fondo-navbar: #291C0E; /* Fondo de la barra de navegación */
+    --fondo-body: #E1D4C2; /* Fondo del cuerpo */
+    --color-texto: #6E473B; /* Color del texto */
+    --color-texto-claro: #E1D4C2; /* Color del texto claro */
+    --color-texto-links: #8C6E63; /* Color del texto de los enlaces */
+    --color-texto-links-oscuro: #3E2522; /* Color del texto de los enlaces */
+    --fondo-boton: #6E473B; /* Fondo del botón */
+    --fondo-boton-claro: #A78D78; /* Fondo del botón claro */
+    --color-boton: #E1D4C2; /* Color del botón */
+    --color-boton-oscuro: #6E473B; /* Color del botón oscuro */
+    --color-boton-codigo: #FFF; /* Color del botón */
+    --fondo-boton-projects-claro: #FFE0B2; /* Fondo del botón */
+    --fondo-tipo: #3E2522; /* Fondo del tipo */
 }
 
 html {
@@ -36,17 +30,17 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-    background: var(--body-bg);
+    background: var(--fondo-body);
 }
 
 body::-webkit-scrollbar-thumb {
-    background: var(--highlight-color);
+    background: var(--fondo-boton);
     border-radius: 4px;
 }
 
 @supports not selector(::-webkit-scrollbar) {
     body {
-        scrollbar-color: var(--accent-color) var(--primary-dark);
+        scrollbar-color: var(--fondo-boton);
     }
 }
 
@@ -79,8 +73,8 @@ body {
     min-height: 100dvh;
     margin: 0 auto;
     padding: 1rem;
-    background-color: var(--body-bg);
-    color: var(--body-color);
+    background-color: var(--fondo-body) !important;
+    color: #2C3E50;
     transition: background-color 0.3s, color 0.3s;
 }
 
@@ -109,67 +103,23 @@ body {
     font-size: 1.2rem;
 }
 
-#optionsMenu a,
-#optionsMenu i {
+#optionsMenu a, #optionsMenu i {
     text-decoration: none;
     opacity: 0.8;
     color: inherit;
 }
 
-#optionsMenu a:hover,
-#optionsMenu i:hover {
+#optionsMenu a:hover, #optionsMenu i:hover {
     opacity: 1;
     cursor: pointer;
 }
 
-.evidenLogo {
-    fill: var(--accent-color);
-    height: 0.8rem;
-}
-
-.text-lightBlue {
-    color: var(--secondary-accent);
-}
-
-.text-yellow {
-    color: #F39C12;
-}
-
-.text-gray {
-    color: var(--gray);
-}
-
 .text-highlight {
-    color: var(--highlight-color);
+    color: var(--color-texto);
 }
 
 .mt-1 {
     margin-top: 0.5rem;
-}
-
-.bg-grad {
-    background-color: hsla(197, 71%, 14%, 1);
-    background-image: radial-gradient(
-            circle at 26% -2%,
-            hsla(0, 100%, 66%, 0.17) 34%,
-            transparent 111%
-        ),
-        radial-gradient(
-            circle at 33% 22%,
-            hsla(210, 100%, 20%, 1) 193%,
-            transparent 211%
-        ),
-        radial-gradient(
-            circle at 26% 2%,
-            hsla(200, 6%, 93%, 1) 19%,
-            transparent 76%
-        ),
-        radial-gradient(
-            circle at 1% 1122%,
-            hsla(231, 5%, 23%, 1) 0%,
-            transparent 150%
-        );
-    background-blend-mode: normal, normal, normal, normal;
 }
 
 section {
@@ -195,7 +145,7 @@ section {
     height: 5rem;
     width: auto;
     border-radius: 34% 66% 64% 36% / 37% 39% 61% 63%;
-    border: 5px solid var(--accent-color); /* Borde de color Cian */
+    border: 5px solid var(--fondo-navbar); /* Borde de color Cian */
     transition: transform 0.3s ease-in-out;
 }
 
@@ -215,90 +165,10 @@ section {
     gap: 2rem;
 }
 
-.project {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    border-radius: 8px;
-    text-decoration: none;
-    transition: all 0.3s;
-}
-
-.project .img-container {
-    width: 100%;
-    aspect-ratio: 3 / 2;
-    border-radius: 16px;
-    border: 1px solid var(--highlight-color);
-    overflow: hidden;
-    position: relative;
-    img {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        object-fit: cover;
-        transform: translate(-50%, -50%) scale(1);
-        filter: grayscale(50%);
-        transition: transform 0.3s, filter 0.3s;
-    }
-}
-
-.project:hover img {
-    filter: none;
-}
-
-.project-details {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.techList {
-    display: flex;
-    gap: 0.5rem;
-}
-
-.techItem {
-    display: flex;
-    align-items: center;
-    gap: 0.25rem;
-    border-radius: 500px;
-    background-color: var(--highlight-color);
-    color: var(--over-highlight-color);
-    padding: 0.1rem 0.5rem;
-    font-size: 0.85rem;
-}
-
-.svg {
-    width: 0.85rem;
-    height: 0.85rem;
-}
-
-.project-links {
-    display: flex;
-    gap: 0.5rem;
-}
-
-.project-links a {
-    display: flex;
-    gap: 0.5rem;
-    text-decoration: none;
-    color: inherit;
-    border: 1px solid var(--gray);
-    border-radius: 500px;
-    padding: 0.2rem 0.5rem;
-    transition: border 0.3s;
-    i {
-        transition: color 0.3s;
-    }
-}
-
 .project-links a:hover {
-    border: 1px solid var(--highlight-color);
+    border: 1px solid #00C6D7;
     i {
-        color: var(--highlight-color);
+        color: #00C6D7;
     }
 }
 
@@ -325,7 +195,7 @@ section {
 footer {
     width: calc(100% - 2rem);
     padding: 2rem 0;
-    color: var(--gray);
+    color: var(--color-texto);
     font-size: 0.9rem;
     display: flex;
     flex-direction: column;
@@ -338,56 +208,51 @@ footer {
     gap: 1rem;
     a {
         text-decoration: none;
-        color: var(--body-color);
+        color: var(--color-texto-links);
         transition: color 0.3s;
     }
     a:hover {
-        color: var(--highlight-color);
+        color: var(--color-texto-links-oscuro);
     }
 }
 
-@media screen and (min-width: 768px) {
-    body {
-        width: 80%;
-    }
-
-    .sectionIntro {
-        align-items: start;
-    }
-
-    .intro {
-        flex-direction: row;
-        div {
-            text-align: start;
-        }
-    }
-
-    .projectsList {
-        gap: 3rem;
-    }
-
-    .project {
-        flex-direction: row;
-        justify-content: space-between;
-        .img-container {
-            width: 50%;
-            aspect-ratio: initial;
-        }
-        .project-details {
-            width: 100%;
-        }
-    }
-
-    .logos {
-        justify-content: space-between;
-    }
+/* Botón personalizado */
+.btn-filtrado, .btn-projects, .btn-codigo{
+    background-color: var(--fondo-boton); /* Color principal */
+    color: var(--color-boton); /* Color del texto */
+    padding: 10px 20px; /* Espaciado interno */
+    font-size: 16px; /* Tamaño del texto */
+    border-radius: 50px; /* Bordes redondeados */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    font-weight: bold; /* Texto en negrita */
+    transition: background-color 0.3s, transform 0.3s; /* Efectos de transición */
 }
 
-/* Botón personalizado para la descarga de CV */
+.btn-filtrado:hover {
+    color: var(--color-boton-oscuro);
+    background-color: var(--fondo-boton-claro); /* Color de fondo en hover */
+    transform: scale(1.05); /* Efecto de escala al pasar el cursor */
+}
+
+.btn-projects:hover, .btn-codigo:hover {
+    color: var(--color-boton-codigo);
+    background-color: var(--fondo-boton-projects-claro); /* Color de fondo en hover */
+    transform: scale(1.05); /* Efecto de escala al pasar el cursor */
+}
+
+.btn-filtrado:active{
+    background-color: var(--fondo-boton-claro); /* Color de fondo en clic */
+    transform: scale(1); /* Efecto de escala al hacer clic */
+}
+
+.btn-projects:active, .btn-codigo:active {
+    background-color: var(--fondo-boton-projects-claro); /* Color de fondo en hover */
+    transform: scale(1); /* Efecto de escala al pasar el cursor */
+}
+
 .btn-download-cv {
-    background-color: var(--highlight-color); /* Color principal */
-    color: var(--over-highlight-color); /* Color del texto */
-    border: none; /* Sin borde */
+    background-color: var(--fondo-boton); /* Color principal */
+    color: var(--color-boton); /* Color del texto */
     padding: 10px 20px; /* Espaciado interno */
     font-size: 16px; /* Tamaño del texto */
     border-radius: 50px; /* Bordes redondeados */
@@ -397,13 +262,13 @@ footer {
 }
 
 .btn-download-cv:hover {
-    color: white;
-    background-color: #007c99; /* Color de fondo en hover */
+    color: var(--color-boton-oscuro);
+    background-color: var(--fondo-boton-claro); /* Color de fondo en hover */
     transform: scale(1.05); /* Efecto de escala al pasar el cursor */
 }
 
 .btn-download-cv:active {
-    background-color: #005f73; /* Color de fondo en clic */
+    background-color: var(--fondo-boton-claro); /* Color de fondo en clic */
     transform: scale(1); /* Efecto de escala al hacer clic */
 }
 
@@ -415,20 +280,20 @@ footer {
 }
 
 .custom-navbar {
-    background-color: rgba(93, 173, 226, 0.7); /* Color translúcido usando el color de tu paleta (var(--accent-color)) */
+    background-color: var(--fondo-navbar);
     -webkit-backdrop-filter: blur(10px); /* Fondo desenfocado */
     backdrop-filter: blur(10px);
     transition: background-color 0.3s ease-in-out;
     box-shadow: 0 4px 6px var(--shadow-color);
 }
 
-.custom-navbar .nav-link {
-    color: var(--body-color); /* Color del texto */
+.custom-navbar .nav-link, .navbar-brand {
+    color: var(--color-texto) !important; /* Color del texto */
     transition: color 0.3s;
 }
 
-.custom-navbar .nav-link:hover {
-    color: var(--highlight-color); /* Color de resaltado al pasar el cursor */
+.custom-navbar:hover .nav-link:hover, .navbar-brand:hover {
+    color: var(--color-texto-claro) !important; /* Color de resaltado al pasar el cursor */
 }
 
 /* Zoom en las cartas y sombra al hacer hover */
@@ -455,4 +320,9 @@ footer {
 
 .card {
     animation: fadeInUp 0.6s ease both;
+}
+
+.fondo-tipos{
+    background-color: var(--fondo-tipo) !important;
+    color: var(--color-texto-claro);
 }

@@ -11,8 +11,8 @@
 
     <!-- Filtros de Tecnología -->
     <div class="d-flex justify-content-center mb-4">
-        <button class="btn btn-outline-primary me-2" (click)="filterCertifications('all')">Todos</button>
-        <button *ngFor="let tech of technologies" class="btn btn-outline-primary me-2" (click)="filterCertifications(tech)">
+        <button class="btn btn-filtrado me-2" (click)="filterCertifications('all')">Todos</button>
+        <button *ngFor="let tech of technologies" class="btn btn-filtrado me-2" (click)="filterCertifications(tech)">
             {{ tech }}
         </button>
     </div>
@@ -35,7 +35,7 @@
                         </li>
                     </ul>
                     <!-- Enlace opcional al certificado -->
-                    <a *ngIf="certification.link" [href]="certification.link" target="_blank" class="btn btn-outline-primary mt-auto">
+                    <a *ngIf="certification.link" [href]="certification.link" target="_blank" class="btn btn-filtrado mt-auto">
                         Ver Certificado
                     </a>
                 </div>
@@ -45,10 +45,10 @@
 
     <!-- Botones de "Mostrar Más" y "Mostrar Menos" -->
     <div class="text-center mt-4">
-        <button *ngIf="certificationsToShow < filteredCertifications.length" (click)="showMoreCertifications()" class="btn btn-outline-primary">
+        <button *ngIf="certificationsToShow < filteredCertifications.length" (click)="showMoreCertifications()" class="btn btn-filtrado">
             Mostrar más certificados
         </button>
-        <button *ngIf="certificationsToShow > 4" (click)="showLessCertifications()" class="btn btn-outline-secondary">
+        <button *ngIf="certificationsToShow > 4" (click)="showLessCertifications()" class="btn btn-filtrado">
             Mostrar menos certificados
         </button>
     </div>

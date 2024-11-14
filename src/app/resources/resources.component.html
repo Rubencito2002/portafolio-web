@@ -6,8 +6,8 @@
 
     <!-- Botones de filtrado -->
     <div class="d-flex justify-content-center mb-4">
-        <button class="btn btn-outline-primary me-2" (click)="filterResources('all')">Todos</button>
-        <button *ngFor="let lang of languages" class="btn btn-outline-primary me-2"  (click)="filterResources(lang)">
+        <button class="btn btn-filtrado me-2" (click)="filterResources('all')">Todos</button>
+        <button *ngFor="let lang of languages" class="btn btn-filtrado me-2"  (click)="filterResources(lang)">
             {{ lang }}
         </button>
     </div>
@@ -19,9 +19,9 @@
                 <div class="card-body">
                     <h5 class="card-title">{{ resource.title }}</h5>
                     <p class="card-text">{{ resource.description }}</p>
-                    <span class="badge bg-secondary">{{ resource.type }}</span>
+                    <span class="badge fondo-tipos">{{ resource.type }}</span>
                     <div class="mt-3">
-                        <a [href]="resource.link" target="_blank" class="btn btn-outline-primary">Ver Recurso</a>
+                        <a [href]="resource.link" target="_blank" class="btn btn-filtrado">Ver Recurso</a>
                     </div>
                 </div>
             </div>
@@ -30,11 +30,11 @@
 
     <!-- Botones de "Mostrar Más" y "Mostrar Menos" -->
     <div class="text-center mt-4">
-        <button *ngIf="resourcesToShow < filteredResources.length" (click)="showMoreResources()" class="btn btn-outline-primary">
-            Mostrar más proyectos
+        <button *ngIf="resourcesToShow < filteredResources.length" (click)="showMoreResources()" class="btn btn-filtrado">
+            Mostrar más recursos
         </button>
-        <button *ngIf="resourcesToShow > 4" (click)="showLessResources()" class="btn btn-outline-secondary">
-            Mostrar menos proyectos
+        <button *ngIf="resourcesToShow > 4" (click)="showLessResources()" class="btn btn-filtrado">
+            Mostrar menos recursos
         </button>
     </div>
 </section>

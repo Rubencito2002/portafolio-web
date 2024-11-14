@@ -3,8 +3,8 @@
 
     <!-- Filtros -->
     <div class="d-flex justify-content-center mb-4">
-        <button class="btn btn-outline-primary me-2" (click)="filterProjects('all')">Todos</button>
-        <button *ngFor="let tech of technologies" class="btn btn-outline-primary me-2" (click)="filterProjects(tech)">
+        <button class="btn btn-filtrado me-2" (click)="filterProjects('all')">Todos</button>
+        <button *ngFor="let tech of technologies" class="btn btn-filtrado me-2" (click)="filterProjects(tech)">
             {{ tech }}
         </button>
     </div>
@@ -18,15 +18,15 @@
                     <h5 class="card-title">{{ project.title }}</h5>
                     <p class="card-text">{{ project.description }}</p>
                     <div class="techList mb-2">
-                        <span *ngFor="let tech of project.technologies" class="badge bg-success me-1">
+                        <span *ngFor="let tech of project.technologies" class="badge fondo-tipos me-1">
                             {{ tech }}
                         </span>
                     </div>
                     <div class="d-flex justify-content-between">
-                        <a *ngIf="project.link" [href]="project.link" target="_blank" class="btn btn-outline-primary">
+                        <a *ngIf="project.link" [href]="project.link" target="_blank" class="btn btn-projects">
                             <i class="bi bi-link-45deg"></i> Proyecto
                         </a>
-                        <a [href]="project.code" target="_blank" class="btn btn-outline-secondary">
+                        <a [href]="project.code" target="_blank" class="btn btn-codigo">
                             <i class="bi bi-code-slash"></i> Código
                         </a>
                     </div>
@@ -37,10 +37,10 @@
 
     <!-- Botones de "Mostrar Más" y "Mostrar Menos" -->
     <div class="text-center mt-4">
-        <button *ngIf="projectsToShow < filteredProjects.length" (click)="showMoreProjects()" class="btn btn-outline-primary">
+        <button *ngIf="projectsToShow < filteredProjects.length" (click)="showMoreProjects()" class="btn btn-filtrado">
             Mostrar más proyectos
         </button>
-        <button *ngIf="projectsToShow > 4" (click)="showLessProjects()" class="btn btn-outline-secondary">
+        <button *ngIf="projectsToShow > 4" (click)="showLessProjects()" class="btn btn-filtrado">
             Mostrar menos proyectos
         </button>
     </div>
