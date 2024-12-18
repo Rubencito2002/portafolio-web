@@ -1,7 +1,7 @@
 <!-- Menú de navegación con fondo translúcido -->
 <nav class="navbar navbar-expand-lg custom-navbar fixed-top">
-  <div class="container">
-    <a class="navbar-brand" href="#">Mi Portfolio</a>
+  <div class="container-fluid px-3 px-md-5">
+    <a class="navbar-brand fw-bold" href="#">Mi Portfolio</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -19,36 +19,38 @@
         <li class="nav-item">
           <a class="nav-link" href="#resourceSection">Mis Recomendaciones</a>
         </li>
-        <!-- <li class="nav-item">
-          <a class="nav-link" href="#contactoSection">Contacto</a>
-        </li> -->
       </ul>
     </div>
   </div>
 </nav>
 
+<!-- Sobre mí -->
 <section class="aboutSection py-5" id="aboutSection">
   <div class="container">
     <app-skills></app-skills>
   </div>
 </section>
 
+<!-- Certificaciones y Logros -->
 <section class="certificationSection py-5" id="certificationSection">
   <div class="container">
     <app-certifications></app-certifications>
   </div>
 </section>
 
-<section class="projectsSection py-5" id="projectsSection">
+<!-- Proyectos -->
+<section class="projectsSection py-5 bg-light" id="projectsSection">
   <div class="container">
     <app-projects></app-projects>
   </div>
 </section>
 
+<!-- Mis Recomendaciones -->
 <section class="resourceSection py-5" id="resourceSection">
   <div class="container">
     <app-resources></app-resources>
   </div>
 </section>
-  
+
+<!-- Pie de página -->
 <app-footer></app-footer>

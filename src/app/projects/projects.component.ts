@@ -95,6 +95,15 @@ export class ProjectsComponent {
       image: 'assets/img/png/tablero-kanban.png',
       technologies: ['HTML', 'Bootstrap', 'React'],
       code: 'https://github.com/Rubencito2002/kanban-board',
+      link: 'https://gestor-eventos.vercel.app/',
+      tipo	: ['Frontend']
+    },
+    {
+      title: 'Gestor de Eventos y Reservas',
+      description: 'Una plataforma web para gestionar eventos, permitiendo crear, editar y visualizar eventos, así como realizar reservas. Los usuarios pueden gestionar detalles como título, descripción, fecha, hora, ubicación y aforo máximo.',
+      image: 'assets/img/png/gestor-eventos.png',
+      technologies: ['HTML', 'Bootstrap', 'Angular'],
+      code: 'https://github.com/Rubencito2002/gestor-eventos',
       link: 'https://kanban-tablero.vercel.app/',
       tipo	: ['Frontend']
     }
