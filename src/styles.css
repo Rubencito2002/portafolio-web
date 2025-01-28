@@ -58,7 +58,7 @@ h1, h2, h3, h4 {
     text-wrap: balance;
 }
 
-h3 {
+h3, b {
     text-align: center;
     text-decoration: underline;
     margin-bottom: 15px;
@@ -182,7 +182,7 @@ section {
 }
 
 .logos img, .logos svg {
-    height: 3.5rem;
+    height: 3rem;
     width: auto;
     margin-top: 15px;
     margin-bottom: 15px;
