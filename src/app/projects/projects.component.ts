@@ -106,6 +106,15 @@ export class ProjectsComponent {
       code: 'https://github.com/Rubencito2002/gestor-eventos',
       link: 'https://kanban-tablero.vercel.app/',
       tipo	: ['Frontend']
+    },
+    {
+      title: 'Gestor de Listas de Tareas con Firebase',
+      description: 'Aplicación web para gestionar listas de tareas con autenticación y sincronización en tiempo real mediante Firebase. Colaborado con un compañero de clase.',
+      image: 'assets/img/png/gestor-listas.png',
+      technologies: ['HTML', 'CSS', 'Bootstrap', 'JS', 'Firebase'],
+      code: 'https://github.com/Rubencito2002/Gestion-de-Listas',
+      link: 'https://gestion-de-listas.vercel.app/',
+      tipo	: ['Fullstack']
     }
   ];
 
