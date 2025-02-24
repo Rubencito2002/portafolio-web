@@ -6,15 +6,15 @@
     margin: 0;
     padding: 0;
     --shadow-color: rgba(0, 0, 0, 0.1); /* Sombra ligera */
-    --fondo-navbar: #2D1E17; /* Fondo de la barra de navegación */
-    --fondo-body: #EADDD3; /* Fondo del cuerpo */
-    --color-texto: #523F31; /* Color del texto */
+    --fondo-navbar: #291C0E; /* Fondo de la barra de navegación */
+    --fondo-body: #E1D4C2; /* Fondo del cuerpo */
+    --color-texto: #6E473B; /* Color del texto */
     --color-texto-claro: #E1D4C2; /* Color del texto claro */
-    --color-texto-links: #9D8A7C; /* Color del texto de los enlaces */
-    --color-texto-links-oscuro: #796254; /* Color del texto de los enlaces */
+    --color-texto-links: #8C6E63; /* Color del texto de los enlaces */
+    --color-texto-links-oscuro: #3E2522; /* Color del texto de los enlaces */
     --fondo-boton: #6E473B; /* Fondo del botón */
     --fondo-boton-claro: #A78D78; /* Fondo del botón claro */
-    --color-boton: #C4B6AB; /* Color del botón */
+    --color-boton: #E1D4C2; /* Color del botón */
     --color-boton-oscuro: #6E473B; /* Color del botón oscuro */
     --color-boton-codigo: #FFF; /* Color del botón */
     --fondo-boton-projects-claro: #FFE0B2; /* Fondo del botón */
