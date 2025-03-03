@@ -88,6 +88,12 @@ export class CertificationsComponent implements OnInit {
       description: 'Completado el taller sobre IA.',
       link: 'https://openwebinars.net/certificado/55prd?type=png',
       technologies: ['Inteligencia Artificial']
+    },
+    {
+      title: 'Programación web con PHP y Symfony',
+      organization: 'Formación Online',
+      description: 'Curso de programación para crear páginas web.',
+      technologies: ['PHP', 'Symfony']
     }
   ];
 
