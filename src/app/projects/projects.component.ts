@@ -111,7 +111,7 @@ export class ProjectsComponent {
       title: 'Gestor de Listas de Tareas con Firebase',
       description: 'Aplicación web para gestionar listas de tareas con autenticación y sincronización en tiempo real mediante Firebase. Colaborado con un compañero de clase.',
       image: 'assets/img/png/gestor-listas.png',
-      technologies: ['HTML', 'CSS', 'Bootstrap', 'JS', 'Firebase'],
+      technologies: ['HTML', 'CSS', 'Bootstrap', 'JavaScript', 'Firebase'],
       code: 'https://github.com/Rubencito2002/Gestion-de-Listas',
       link: 'https://gestion-de-listas.vercel.app/',
       tipo	: ['Fullstack']
@@ -119,7 +119,7 @@ export class ProjectsComponent {
     {
       title: 'Generador de Contraseñas Seguras',
       description: 'Genera contraseñas seguras de manera aleatoria con opciones personalizables, como longitud, caracteres especiales y números. Copia la contraseña al portapapeles con un solo clic.',
-      image: 'assets/img/png/generador-contrasenas.png',
+      image: 'assets/img/png/generador-contraseñas.png',
       technologies: ['HTML', 'CSS', 'Bootstrap', 'JavaScript'], 
       code: 'https://github.com/Rubencito2002/password-generator',
       link: 'https://generator-password-secure.vercel.app/',
