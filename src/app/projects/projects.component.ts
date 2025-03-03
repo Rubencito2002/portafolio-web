@@ -119,7 +119,7 @@ export class ProjectsComponent {
     {
       title: 'Generador de Contraseñas Seguras',
       description: 'Genera contraseñas seguras de manera aleatoria con opciones personalizables, como longitud, caracteres especiales y números. Copia la contraseña al portapapeles con un solo clic.',
-      image: 'assets/img/png/generador-contraseñas.png',
+      image: 'assets/img/png/generador-contraseña.png',
       technologies: ['HTML', 'CSS', 'Bootstrap', 'JavaScript'], 
       code: 'https://github.com/Rubencito2002/password-generator',
       link: 'https://generator-password-secure.vercel.app/',
