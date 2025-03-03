@@ -60,6 +60,13 @@ export class ResourcesComponent {
       description: 'Diseño de interfaces.',
       link: 'https://www.figma.com/es-es/',
       languages: ['Figma']
+    },
+    {
+      title: 'CSS Gradient',
+      type: 'Herramienta',
+      description: 'Generador que permite crear gradientes de colores para CSS.',
+      link: 'https://cssgradient.io/',
+      languages: ['CSS']
     }
   ];
 
