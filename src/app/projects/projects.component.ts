@@ -115,7 +115,16 @@ export class ProjectsComponent {
       code: 'https://github.com/Rubencito2002/Gestion-de-Listas',
       link: 'https://gestion-de-listas.vercel.app/',
       tipo	: ['Fullstack']
-    }
+    },
+    {
+      title: 'Generador de Contraseñas Seguras',
+      description: 'Genera contraseñas seguras de manera aleatoria con opciones personalizables, como longitud, caracteres especiales y números. Copia la contraseña al portapapeles con un solo clic.',
+      image: 'assets/img/png/generador-contrasenas.png',
+      technologies: ['HTML', 'CSS', 'Bootstrap', 'JavaScript'], 
+      code: 'https://github.com/Rubencito2002/password-generator',
+      link: 'https://generator-password-secure.vercel.app/',
+      tipo	: ['Frontend']
+    },
   ];
 
   filteredProjects: Project[] = this.projects;
