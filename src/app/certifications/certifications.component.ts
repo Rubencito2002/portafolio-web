@@ -6,8 +6,9 @@ interface Certification {
   organization: string;
   date?: string;
   description: string;
-  link?: string;
-  technologies: string[];  // Nueva propiedad para almacenar tecnologías asociadas
+  link?: string;  // Para certificados con URL
+  pdfUrl?: string; // Para certificados en PDF
+  technologies: string[];
 }
 
 @Component({
@@ -93,6 +94,7 @@ export class CertificationsComponent implements OnInit {
       title: 'Programación web con PHP y Symfony',
       organization: 'Formación Online',
       description: 'Curso de programación para crear páginas web.',
+      pdfUrl: 'assets/certificados/certificado-php-symfony.pdf',
       technologies: ['PHP', 'Symfony']
     }
   ];
