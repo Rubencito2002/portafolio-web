@@ -24,7 +24,7 @@ export class ProjectsComponent {
     {
       title: 'Búsqueda de Personajes de Marvel',
       description: 'Este proyecto fue uno de los primeros que desarrollé utilizando REACT, es un buscador de personajes que utiliza la API de Marvel.',
-      image: 'assets/img/png/proyectoMarvel.png',
+      image: 'assets/img/png/projects/proyectoMarvel.png',
       technologies: ['JavaScript', 'React'],
       link: 'https://marvel-explorer-phi.vercel.app/',
       code: 'https://github.com/Rubencito2002/marvel-explorer',
@@ -33,7 +33,7 @@ export class ProjectsComponent {
     {
       title: 'Proyecto de Bootstrap & CSS',
       description: 'Este proyecto muestra el uso de Bootstrap y CSS para crear una página web responsive y atractiva.',
-      image: 'assets/img/png/proyectoBootstrap&CSS.png',
+      image: 'assets/img/png/projects/proyectoBootstrap&CSS.png',
       technologies: ['HTML', 'CSS', 'Bootstrap'],
       link: 'https://proyecto-bootstrap-con-css.vercel.app/',
       code: 'https://github.com/Rubencito2002/ProyectoBootstrapConCSS',
@@ -42,7 +42,7 @@ export class ProjectsComponent {
     {
       title: 'Gestor de Contactos en React con Bootstrap',
       description: 'Aplicación que permite gestionar contactos, desarrollada en React y React Bootstrap.',
-      image: 'assets/img/png/proyectoGestordeContactos.png',
+      image: 'assets/img/png/projects/proyectoGestordeContactos.png',
       technologies: ['Bootstrap', 'React' ],
       link: 'https://gestor-de-contactos.vercel.app/',
       code: 'https://github.com/Rubencito2002/gestor-de-contactos',
@@ -51,7 +51,7 @@ export class ProjectsComponent {
     {
       title: 'Rock, Paper, Scissors',
       description: 'Juego interactivo de "Piedra, Papel o Tijeras" implementado en JavaScript con una interfaz visual intuitiva. Los resultados se muestran en pantalla y se celebra una victoria con una animación de confeti, con opción para reiniciar el juego.',
-      image: 'assets/img/png/Rock-Paper-Scissor.png',
+      image: 'assets/img/png/projects/Rock-Paper-Scissor.png',
       technologies: ['HTML', 'CSS', 'JavaScript'],
       link: 'https://rock-paper-scissor-flame-theta.vercel.app/',
       code: 'https://github.com/Rubencito2002/Rock-Paper--Scissor',
@@ -60,7 +60,7 @@ export class ProjectsComponent {
     {
       title: 'Calculadora de IMC con Bootstrap',
       description: 'Aplicación web que calcula el Índice de Masa Corporal (IMC) a partir del peso y la altura ingresados, mostrando el resultado en una interfaz limpia y estilizada con Bootstrap.',
-      image: 'assets/img/png/calculadora-imc.png',
+      image: 'assets/img/png/projects/calculadora-imc.png',
       technologies: ['HTML', 'CSS', 'JavaScript', 'Bootstrap'],
       link: 'https://calculadora-imc-indol-psi.vercel.app/',
       code: 'https://github.com/Rubencito2002/calculadora-imc',
@@ -69,7 +69,7 @@ export class ProjectsComponent {
     {
       title: 'Conversor de Moneda en Tiempo Real',
       description: 'Convierte cantidades entre diferentes monedas utilizando tasas de cambio actualizadas al instante.',
-      image: 'assets/img/png/conversor-moneda.png',
+      image: 'assets/img/png/projects/conversor-moneda.png',
       technologies: ['HTML', 'CSS', 'JavaScript', 'Bootstrap'],
       link: 'https://conversor-moneda-iota.vercel.app/',
       code: 'https://github.com/Rubencito2002/conversor-moneda',
@@ -92,7 +92,7 @@ export class ProjectsComponent {
     {
       title: 'Tablero Kanban: Gestión de Tareas Eficiente',
       description: 'Organiza tus tareas de manera efectiva con nuestro Tablero Kanban. Visualiza el progreso de tus proyectos y mejora la colaboración en equipo a través de un sistema intuitivo y fácil de usar.',
-      image: 'assets/img/png/tablero-kanban.png',
+      image: 'assets/img/png/projects/tablero-kanban.png',
       technologies: ['HTML', 'Bootstrap', 'React'],
       code: 'https://github.com/Rubencito2002/kanban-board',
       link: 'https://gestor-eventos.vercel.app/',
@@ -101,7 +101,7 @@ export class ProjectsComponent {
     {
       title: 'Gestor de Eventos y Reservas',
       description: 'Una plataforma web para gestionar eventos, permitiendo crear, editar y visualizar eventos, así como realizar reservas. Los usuarios pueden gestionar detalles como título, descripción, fecha, hora, ubicación y aforo máximo.',
-      image: 'assets/img/png/gestor-eventos.png',
+      image: 'assets/img/png/projects/gestor-eventos.png',
       technologies: ['HTML', 'Bootstrap', 'Angular'],
       code: 'https://github.com/Rubencito2002/gestor-eventos',
       link: 'https://kanban-tablero.vercel.app/',
@@ -110,7 +110,7 @@ export class ProjectsComponent {
     {
       title: 'Gestor de Listas de Tareas con Firebase',
       description: 'Aplicación web para gestionar listas de tareas con autenticación y sincronización en tiempo real mediante Firebase. Colaborado con un compañero de clase.',
-      image: 'assets/img/png/gestor-listas.png',
+      image: 'assets/img/png/projects/gestor-listas.png',
       technologies: ['HTML', 'CSS', 'Bootstrap', 'JavaScript', 'Firebase'],
       code: 'https://github.com/Rubencito2002/Gestion-de-Listas',
       link: 'https://gestion-de-listas.vercel.app/',
@@ -119,10 +119,19 @@ export class ProjectsComponent {
     {
       title: 'Generador de Contraseñas Seguras',
       description: 'Genera contraseñas seguras de manera aleatoria con opciones personalizables, como longitud, caracteres especiales y números. Copia la contraseña al portapapeles con un solo clic.',
-      image: 'assets/img/png/generador-contraseña.png',
+      image: 'assets/img/png/projects/generador-contraseña.png',
       technologies: ['HTML', 'CSS', 'Bootstrap', 'JavaScript'], 
       code: 'https://github.com/Rubencito2002/password-generator',
       link: 'https://generator-password-secure.vercel.app/',
+      tipo	: ['Frontend']
+    },
+    {
+      title: 'Buscador de Películas',
+      description: 'Una aplicación web que permite buscar películas por título, mostrando los resultados con animaciones y diseño responsive.',
+      image: 'assets/img/png/projects/buscador-peliculas.png',
+      technologies: ['HTML', 'CSS', 'Bootstrap', 'React'], 
+      code: 'https://github.com/Rubencito2002/buscador-peliculas',
+      link: 'https://buscador-peliculas-chi.vercel.app/',
       tipo	: ['Frontend']
     },
   ];
