@@ -67,6 +67,13 @@ export class ResourcesComponent {
       description: 'Generador que permite crear gradientes de colores para CSS.',
       link: 'https://cssgradient.io/',
       languages: ['CSS']
+    },
+    {
+      title: 'Herramienta de Desarrollo',
+      type: 'Herramienta',
+      description: 'Decenas de hojas de referencia rápida y trucos para lenguajes de programación y herramientas de desarrollo.',
+      link: 'https://quickref.me/',
+      languages: ['Generico']
     }
   ];
 
