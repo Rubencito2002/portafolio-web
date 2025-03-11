@@ -74,6 +74,34 @@ export class ResourcesComponent {
       description: 'Decenas de hojas de referencia rápida y trucos para lenguajes de programación y herramientas de desarrollo.',
       link: 'https://quickref.me/',
       languages: ['Generico']
+    },
+    {
+      title: '¿Qué es la IA generativa?',
+      type: 'Documentación',
+      description: 'La IA generativa, o IA gen, es un tipo de inteligencia artificial (IA) capaz de crear nuevos contenidos e ideas, como imágenes y videos, así como de volver a utilizar aquello que sabe para resolver nuevos problemas.',
+      link: 'https://aws.amazon.com/what-is/generative-ai/',
+      languages: ['IA']
+    },
+    {
+      title: 'Centro de innovación en IA generativa',
+      type: 'Documentación',
+      description: 'Dele forma al futuro de su empresa con capacidades de IA generativa.',
+      link: 'https://aws.amazon.com/es/ai/generative-ai/innovation-center/',
+      languages: ['IA']
+    },
+    {
+      title: 'Anuncio de nuevas herramientas para desarrollar con IA generativa en AWS',
+      type: 'Documentación',
+      description: 'Blog de aprendizaje automático de AWS',
+      link: 'https://aws.amazon.com/es/blogs/machine-learning/announcing-new-tools-for-building-with-generative-ai-on-aws/',
+      languages: ['IA']
+    },
+    {
+      title: 'Transforme su negocio gracias a la IA generativa',
+      type: 'Documentación',
+      description: 'Aumente la productividad, cree experiencias diferenciadas e innove más rápido con AWS',
+      link: 'https://aws.amazon.com/es/ai/generative-ai/',
+      languages: ['IA']
     }
   ];
 
