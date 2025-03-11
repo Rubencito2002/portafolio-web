@@ -96,6 +96,12 @@ export class CertificationsComponent implements OnInit {
       description: 'Curso de programación para crear páginas web.',
       pdfUrl: 'assets/certificados/certificado-php-symfony.pdf',
       technologies: ['PHP', 'Symfony']
+    },
+    {
+      title: 'Introducción a la IA generativa',
+      organization: 'AWS Educate',
+      description: 'Esta insignia certifica la comprensión básica de la inteligencia artificial generativa tras completar la capacitación y aprobar la evaluación.',
+      technologies: ['IA']
     }
   ];
 
